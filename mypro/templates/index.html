@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello world</h1>
+    <a href="{% url 'main' %}">main</a>
+    <a href="{% url 'first' %}">first</a>
+    <a href="{% url 'second' %}">second</a>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name"><br>
+        <label for="email">email</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email"><br>
+        <input type="submit" value="submit">
+
+    </form>
+</body>
+</html>
