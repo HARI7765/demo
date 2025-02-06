@@ -1,10 +1,8 @@
-from django.contrib import admin
 from django.urls import path
 from . import views
+
 urlpatterns = [
-    path('',views.index,name="index"),
-    path('main',views.main,name="main"),
-    path('first',views.first,name="first"),
-    path('second',views.second,name="second")
-    
+    path('signup/', views.signup, name="signup"),  # Add trailing slash here
+    path('', views.index, name='index'),           # This is fine for the homepage (root)
+    path('home/', views.home, name='home'),        # Add trailing slash here
 ]
